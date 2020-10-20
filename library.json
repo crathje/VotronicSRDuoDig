@@ -1,0 +1,19 @@
+{
+    "name": "VotronicSRDuoDig",
+    "authors":
+    [
+		"Claas Anders Rathje"
+    ],
+	"version": "~0.0.1",
+    "keywords": [
+      "solar", "serial", "votronic"
+    ],
+    "description": "Talk to Votronic SR Duo Digital solar chargers.",
+    "repository":
+    {
+        "type": "git",
+        "url": "https://github.com/crathje/votronicsrduodig.git"
+    },
+    "frameworks": "arduino",
+    "platforms": "espressif"
+}

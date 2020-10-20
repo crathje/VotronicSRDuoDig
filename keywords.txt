@@ -1,0 +1,25 @@
+#######################################
+# Syntax Coloring Map for VotronicSRDuoDig
+# (esp32)
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+VotronicSRDuoDig	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+handle	KEYWORD2
+getCurrent	KEYWORD2
+isValid	KEYWORD2
+getValidAge KEYWORD2
+debug2Serial	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
