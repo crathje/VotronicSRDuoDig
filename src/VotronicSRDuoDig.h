@@ -22,8 +22,8 @@
    SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-#ifndef epsolar_h_
-#define epsolar_h_
+#ifndef vtronicsrduodig_h_
+#define vtronicsrduodig_h_
 
 
 #if defined(ESP8266) || defined(ESP31B) || defined(ESP32)
