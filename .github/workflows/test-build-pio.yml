@@ -36,12 +36,12 @@ jobs:
         pip install --upgrade platformio
     - name: Run PlatformIO
       run: pio run -e mhetesp32devkit
-      working-directory: ./examples/baisc-platformIO
+      working-directory: ./examples/basic-platformIO
     - name: Store builds
       uses: actions/upload-artifact@v4
       with:
-        name: build
+        name: VotronicSRDuoDig-build
         path: |
-          ./examples/baisc-platformIO/pio/build/*/bootloader.bin
-          ./examples/baisc-platformIO/pio/build/*/firmware.bin
-          ./examples/baisc-platformIO/pio/build/*/partitions.bin
+          ./examples/basic-platformIO/.pio/build/*/bootloader.bin
+          ./examples/basic-platformIO/.pio/build/*/firmware.bin
+          ./examples/basic-platformIO/.pio/build/*/partitions.bin

@@ -27,7 +27,7 @@ After selling the above mentioned SR 300 Duo Digital along with the RV, I bought
 
 # Sample
 
-Simple sketch for esp32 using hardware serial: [arduinoHardwareSerial.ino](examples/arduinoHardwareSerial/arduinoHardwareSerial.ino).
+Simple paltform IO project for esp32 using hardware serial: [basic-platformIO/src/main.cpp](examples/basic-platformIO/src/main.cpp).
 
 No device at hand? Try: [arduinoNoDevice.ino](examples/arduinoNoDevice/arduinoNoDevice.ino).
 
