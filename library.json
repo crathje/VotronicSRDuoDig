@@ -1,14 +1,14 @@
 {
-    "name": "VotronicSRDuoDig",
+    "name": "VotronicSolarChargers",
     "authors":
     [
 		"Claas Anders Rathje"
     ],
-	"version": "~0.0.1",
+	"version": "~0.0.2",
     "keywords": [
       "solar", "serial", "votronic"
     ],
-    "description": "Talk to Votronic SR Duo Digital solar chargers.",
+    "description": "Receive data from Votronic SR Duo Digital and MPP Duo Digital solar chargers.",
     "repository":
     {
         "type": "git",

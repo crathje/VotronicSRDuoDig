@@ -1,0 +1,47 @@
+name: PlatformIO CI
+
+on: [push, pull_request]
+
+jobs:
+  test-matrix-pio:
+
+    runs-on: ubuntu-latest
+
+    steps: 
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Declare some variables
+      shell: bash
+      run: |
+        echo "git_sha_short=${GITHUB_SHA::8}" >> "$GITHUB_ENV"
+        echo "git_branch=$(echo ${GITHUB_REF#refs/heads/})" >> "$GITHUB_ENV"
+        echo "git_commit_time=$(git show -s --date=iso --format=%ci ${GITHUB_SHA})" >> "$GITHUB_ENV"
+    - name: Cache pip
+      uses: actions/cache@v2
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+    - name: Cache PlatformIO
+      uses: actions/cache@v2
+      with:
+        path: ~/.platformio
+        key: ${{ runner.os }}-${{ hashFiles('**/lockfiles') }}
+    - name: Set up Python
+      uses: actions/setup-python@v2
+    - name: Install PlatformIO
+      run: |
+        python -m pip install --upgrade pip
+        pip install --upgrade platformio
+    - name: Run PlatformIO
+      run: pio run -e mhetesp32devkit
+      working-directory: ./examples/baisc-platformIO
+    - name: Store builds
+      uses: actions/upload-artifact@v4
+      with:
+        name: build
+        path: |
+          ./examples/baisc-platformIO/pio/build/*/bootloader.bin
+          ./examples/baisc-platformIO/pio/build/*/firmware.bin
+          ./examples/baisc-platformIO/pio/build/*/partitions.bin

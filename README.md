@@ -1,4 +1,7 @@
-# Get data from Votronic SR Duo Digital solar chargers
+[![Actions Status](https://github.com/crathje/VotronicSRDuoDig/workflows/PlatformIO%20CI/badge.svg)](https://github.com/crathje/VotronicSRDuoDig/actions)
+
+
+# Get data from Votronic SR Duo Digital and Votronic MPP / MPPT solar chargers
 
 I am using a Votronic SR 300 Duo Digital with serial no. 13v20.0121 which is not capable of connecting the Votronic bluetooth devices (supported starting with serial no. 14Vxx.xxxxx):
 
@@ -15,6 +18,12 @@ So I tried connecting a logic analyzer and found some flanks with the smaller on
 To verify the voltage I attached a digital storage oscilloscope and found a pretty solid 5V level output (1 y-unit = 1V): 
 
 ![Votronic DSO capture Picture](extras/Votronic_SR_300_Duo_Digital_protocol_oscilloscope.jpg?raw=true "Votronic DSO capture Picture")
+
+
+# Get data from Votronic MPP / MPPT solar chargers
+
+After selling the above mentioned SR 300 Duo Digital along with the RV, I bought a Votronic MPP 430 Duo Digital for my new RV. The protocol is similar but contains e.g. the battery voltage as well which can come in quire handy. 
+
 
 # Sample
 
